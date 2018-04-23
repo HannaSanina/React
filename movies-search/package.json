@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "dependencies": {
     "clean-webpack-plugin": "^0.1.19",
+    "identity-obj-proxy": "^3.0.0",
     "lodash": "^4.17.5",
     "optimize-css-assets-webpack-plugin": "^4.0.0",
     "react": "^16.3.1",
@@ -13,11 +14,12 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.3.0-rc.2",
     "react-scripts": "1.1.4",
+    "react-test-renderer": "^16.3.2",
     "redux": "^3.7.2",
     "uglifyjs-webpack-plugin": "^1.2.5"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "start": "webpack-dev-server --mode=development --open --config webpack.dev.js",
     "build": "webpack -p --config webpack.prod.js",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -25,10 +27,15 @@
     "eject": "react-scripts eject"
   },
   "jest": {
-    "setupFiles": ["./src/App.test.js"],
+    "setupFiles": [
+      "./src/App.test.js"
+    ],
     "snapshotSerializers": [
       "<rootDir>/node_modules/enzyme-to-json/serializer"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "identity-obj-proxy"
+    }
   },
   "devDependencies": {
     "awesome-typescript-loader": "5.0.0",
