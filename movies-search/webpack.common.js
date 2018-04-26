@@ -29,9 +29,30 @@ module.exports = {
                 loader: "awesome-typescript-loader",
                 exclude: /node_modules/,
                 options: {
-                  useCache: true
+                    useCache: true
                 }
-              }
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {}  
+                  }
+                ]
+              },
+            /* {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    'file-loader',
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true,
+                        },
+                    },
+                ],
+            } */
         ]
     },
 
