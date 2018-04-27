@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Image1 from './images/1.jpg'
 import ErrorBoundary from './ErrorBoundary';
-import './App.css';
+import styles from './styles/moviePreview.css'
 
 const MoviePreview = ({ imageId }) => {
-    return <span className="preview-container">
-        <img className="movie" src={imageId} alt="Movie" />
-        <div className="preview">Film title <button>Order</button></div>
+    return <span className={styles.previewContainer}>
+        <img className={styles.movie} src={imageId} alt="Movie" />
+        <div className={styles.preview}>Film title <button>Order</button></div>
     </span>
 }
 
@@ -19,12 +19,12 @@ class MovieList extends React.Component {
 
     render() {
         return <div>
-            <div className="result-stats">
+            <div className={styles.resultStats}>
                 <span> # Movies found</span>
                 <span> Sort by</span>
             </div>  
             <ErrorBoundary>
-                <div className="results-movie">
+                <div className={styles.resultsMovie}>
                     <MoviePreview imageId={Image1} />
                     <MoviePreview imageId={Image1} />
                     <MoviePreview imageId={Image1} />

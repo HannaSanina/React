@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Search from './Search';
 import MovieList from './MovieList';
 import ErrorBoudary from './ErrorBoundary';
-import './App.css';
+import styles from './styles/App.css'
 
 function Welcome(props) {
   return <span>Hello, {props.name}</span>;
@@ -16,9 +16,9 @@ function Title() {
 class App extends Component {
   render() {
     return (
-      <div className="app-container">
-        <div className="stretch-view">
-          <header className="App-header">
+      <div className={styles.appContainer}>
+        <div className={styles.stretchView}>
+          <header className={styles.appHeader}>
             <Search />
             {/* <Welcome name="User" /> */}
           </header>
