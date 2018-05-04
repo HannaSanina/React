@@ -1,0 +1,36 @@
+
+.stretchView {
+    justify-content: space-between
+}
+
+.resultStats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: lightblue;
+}
+
+.resultsMovie {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.resultsMovie>span {
+    width: 300px;
+    padding-bottom: 20px;
+    padding-top:10px;
+}
+
+.preview{
+  display:flex;
+  justify-content: space-between;
+  width: 225px;
+  padding-left: 39px;
+}
+
+img.movie {
+    width: 75%;
+    padding-left: 40px;
+}
