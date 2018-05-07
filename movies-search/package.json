@@ -8,6 +8,7 @@
     "identity-obj-proxy": "^3.0.0",
     "lodash": "^4.17.5",
     "optimize-css-assets-webpack-plugin": "^4.0.0",
+    "npm-run-parallel": "^0.6.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-redux": "^5.0.7",
@@ -25,7 +26,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:e2e": "cypress open",
+    "test:cypress": "cypress open",
+    "test:e2e": "npm-run-all --parallel start test:cypress",
     "eject": "react-scripts eject"
   },
   "jest": {

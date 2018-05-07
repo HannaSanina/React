@@ -4,8 +4,12 @@ describe('e2e test', function () {
       cy.visit('http://localhost:8080/')
     })
 
+    it('preview should have image', function () {
+      cy.get('.movieList').should('have', 'img')
+    })
+
     it('should have movie list', function () {
-      cy.get('App').should('contain', 'MovieList')
+      cy.get('.movieList').should('have.length.above', 1)
     })
   
 });

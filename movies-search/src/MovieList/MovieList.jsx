@@ -12,7 +12,7 @@ class MovieList extends React.Component {
                 <span> Sort by</span>
             </div>
             <ErrorBoundary>
-                <div id="movieList" className={styles.resultsMovie}>
+                <div className={styles.resultsMovie} >
                     {movieDetails.map(item => {
                         return <MoviePreview key={item.id} data={item} />
                     })}
