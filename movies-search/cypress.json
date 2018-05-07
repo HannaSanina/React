@@ -1,0 +1,5 @@
+{
+    "integrationFolder": "src/tests/e2e",
+    "supportFolder": false,
+    "fixturesFolder": false
+}

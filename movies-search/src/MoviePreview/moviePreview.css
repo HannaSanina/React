@@ -1,0 +1,16 @@
+
+.stretchView {
+    justify-content: space-between
+}
+
+.preview{
+  display:flex;
+  justify-content: space-between;
+  width: 225px;
+  padding-left: 39px;
+}
+
+img.movie {
+    width: 75%;
+    padding-left: 40px;
+}

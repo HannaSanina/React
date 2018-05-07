@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Search from './Search';
-import MovieList from './MovieList';
-import ErrorBoudary from './ErrorBoundary';
-import styles from './styles/App.css'
-
-function Welcome(props) {
-  return <span>Hello, {props.name}</span>;
-}
-
-function Title() {
-  return React.createElement('h1', {}, 'The greatest movie collection');
-}
+import Search from './Search/Search.jsx';
+import MovieList from './MovieList/MovieList.jsx';
+import * as styles from './styles/App.css'
 
 class App extends Component {
   render() {

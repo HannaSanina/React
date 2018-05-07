@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import styles from './styles/App.css'
+import styles from '../styles/App.css'
 
 class Search extends React.PureComponent {
   selectedFilter = "Title";

@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ErrorBoundary from './ErrorBoundary';
-import styles from './styles/moviePreview.css';
-
-const MoviePreview = ({ data }) => {
-    return <span className={styles.previewContainer}>
-        <img className={styles.movie} src={data.picture} alt="Movie" title={data.about}/>
-        <div className={styles.preview}>{data.title}<button>Order</button></div>
-    </span>
-}
+import MoviePreview from '../MoviePreview/MoviePreview';
+import styles from './movieList.css'
 
 class MovieList extends React.Component {
     render() {
@@ -18,7 +12,7 @@ class MovieList extends React.Component {
                 <span> Sort by</span>
             </div>
             <ErrorBoundary>
-                <div className={styles.resultsMovie}>
+                <div className={styles.resultsMovie} >
                     {movieDetails.map(item => {
                         return <MoviePreview key={item.id} data={item} />
                     })}
