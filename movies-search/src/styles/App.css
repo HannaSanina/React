@@ -24,20 +24,11 @@
     text-align: center;
 }
 
-.filter {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-input.search {
-    height: 25px;
-    width: 750px;
-    margin-top: 15px;
-}
-
 footer {
     height: 30px;
     background: #2ce4ea;
 }
 
+button {
+    cursor: pointer;
+}

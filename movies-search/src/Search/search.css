@@ -1,0 +1,18 @@
+.searchOption {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+}
+
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+input.search {
+    height: 25px;
+    width: 750px;
+    margin-top: 15px;
+}
