@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { searchMovies } from '../actions.jsx'
 import { connect } from 'react-redux';
 
-class Search extends React.PureComponent {
+class Search extends React.Component {
   state = { input: "", isToggleOn: true, searchField: filters[0] };
 
   handleChange = (e) => {

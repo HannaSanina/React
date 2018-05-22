@@ -5,34 +5,37 @@ import PropTypes from 'prop-types';
 import { fetchAllMovies, SORT_MOVIES, GET_ALL } from '../actions.jsx'
 import { connect } from 'react-redux';
 import styles from './movieList.css'
-import StatusBarContainer from "./StatusBarContainer";
 
-class MovieListContainer extends React.Component {
+class StatusBarContainer extends React.Component {
     state = { isToggleOn: true, sortOption: filters[0] };
+
+    handleSortChange = this.handleSortChange.bind(this);
 
     componentDidMount() {
         const { store } = this.context;
         this.unsubscribe = store.subscribe(() => this.forceUpdate());
-        this.props.fetchData()
     }
 
     componentWillUnmount() {
         this.unsubscribe();
     }
 
+    handleSortChange(filterText) {
+        const { store } = this.context;
+        store.dispatch({ type: SORT_MOVIES, field: filterText });
+    }
+
     render() {
         const { store } = this.context;
-        if (store.getState().error) {
-            return <p>Sorry! There was an error loading the items</p>;
-        }
         return <div>
-            <StatusBarContainer />
-            <MovieList movies={store.getState().data} />
+            <StatusBar
+                onSortChange={this.handleSortChange}
+                result={store.getState().length} />
         </div>;
     }
 }
 
-MovieListContainer.contextTypes = {
+StatusBarContainer.contextTypes = {
     store: PropTypes.object
 }
 
@@ -47,8 +50,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchData: () => dispatch(fetchAllMovies())
+       // fetchData: () => dispatch(fetchAllMovies())
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MovieListContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(StatusBarContainer);

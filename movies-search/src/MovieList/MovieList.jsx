@@ -9,9 +9,9 @@ export default class MovieList extends React.Component {
         return <div>
             <ErrorBoundary>
                 <div className={styles.resultsMovie} >
-                    {this.props.movies.length ? this.props.movies.map(item => {
+                    {this.props.movies.map(item => {
                         return <MoviePreview key={item.id} data={item} />
-                    }) : ""}
+                    })}
                 </div>
             </ErrorBoundary>
         </div>;
