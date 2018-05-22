@@ -11,47 +11,24 @@ class StatusBarContainer extends React.Component {
 
     handleSortChange = this.handleSortChange.bind(this);
 
-    componentDidMount() {
-        const { store } = this.context;
-        this.unsubscribe = store.subscribe(() => this.forceUpdate());
-    }
-
-    componentWillUnmount() {
-        this.unsubscribe();
-    }
-
     handleSortChange(filterText) {
-        const { store } = this.context;
-        store.dispatch({ type: SORT_MOVIES, field: filterText });
+        this.props.sortMovies(filterText);
     }
 
     render() {
-        const { store } = this.context;
         return <div>
             <StatusBar
                 onSortChange={this.handleSortChange}
-                result={store.getState().length} />
+                result={this.props.movies.length} />
         </div>;
     }
 }
 
-StatusBarContainer.contextTypes = {
-    store: PropTypes.object
-}
-
 const filters = ["release_date", "vote_count"];
 
-const mapStateToProps = (state) => {
-    return {
-        data: state.data,
-        error: state.error
-    };
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-       // fetchData: () => dispatch(fetchAllMovies())
-    };
-};
+const mapStateToProps = state => ({ movies: state.movies })
+const mapDispatchToProps = dispatch => ({
+    sortMovies: filterText => dispatch({ type: SORT_MOVIES, field: filterText })
+  })
 
 export default connect(mapStateToProps, mapDispatchToProps)(StatusBarContainer);

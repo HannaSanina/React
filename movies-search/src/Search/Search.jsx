@@ -21,7 +21,6 @@ class Search extends React.Component {
   }
 
   render() {
-    const { store } = this.context;
     return <div><div>Find your movie </div>
       <input name="search" className={styles.search} placeholder="Type here.." 
         onKeyDown={e => e.keyCode == 13 ? this.props.fetchData(this.state.input, this.state.searchField) : ""}
@@ -42,18 +41,9 @@ class Search extends React.Component {
   }
 };
 
-Search.contextTypes = {
-  store: PropTypes.object
-};
-
 const filters = ["Title", "Genre"];
 
-const mapStateToProps = (state) => {
-  return {
-    data: state.data,
-    error: state.error
-  };
-};
+const mapStateToProps = state => ({ movies: state.movies })
 
 const mapDispatchToProps = (dispatch) => {
   return {
