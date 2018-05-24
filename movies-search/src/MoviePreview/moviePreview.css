@@ -6,8 +6,9 @@
 .preview{
   display:flex;
   justify-content: space-between;
-  width: 225px;
+  width: 405px;
   padding-left: 39px;
+  padding-bottom: 15px;
 }
 
 img.movie {

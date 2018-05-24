@@ -3,213 +3,22 @@
 exports[`<MovieList/> should be rendered correctly 1`] = `
 <div>
   <div
-    className="resultStats"
-  >
-    <span>
-       # Movies found
-    </span>
-    <span>
-       Sort by
-    </span>
-  </div>
-  <div
     className="resultsMovie"
-    id="movieList"
   >
     <div
-      className="previewContainer"
+      className="\${styles.previewContainer} movieList"
     >
       <img
         alt="Movie"
         className="movie"
-        src="https://imgc.allpostersimages.com/img/posters/titanic_u-L-F4S6CQ0.jpg?src=gp&w=300&h=375"
-        title="Fugiat velit commodo sint sit occaecat consequat magna nulla cupidatat incididunt magna. Veniam aliquip fugiat minim nulla incididunt aliqua dolore proident pariatur excepteur. Sunt pariatur enim minim magna. Do id dolor sint labore sint do eiusmod est et do ullamco aliquip."
+        src={undefined}
+        title={undefined}
       />
       <div
         className="preview"
       >
         <span>
           CANOPOLY
-        </span>
-        <button>
-          Order
-        </button>
-      </div>
-    </div>
-    <div
-      className="previewContainer"
-    >
-      <img
-        alt="Movie"
-        className="movie"
-        src="https://imgc.allpostersimages.com/img/posters/the-terminator_u-L-F13M960.jpg?src=gp&w=300&h=375"
-        title="Et eiusmod proident nostrud velit dolor ullamco ex elit cupidatat ut velit. Ea et ex occaecat dolor culpa irure. Id aute irure eu et fugiat eiusmod mollit nostrud veniam anim reprehenderit. Excepteur sunt est nostrud consequat."
-      />
-      <div
-        className="preview"
-      >
-        <span>
-          ZENTHALL
-        </span>
-        <button>
-          Order
-        </button>
-      </div>
-    </div>
-    <div
-      className="previewContainer"
-    >
-      <img
-        alt="Movie"
-        className="movie"
-        src="https://imgc.allpostersimages.com/img/posters/pulp-fiction-cover-with-uma-thurman-movie-poster_u-L-F13MQF0.jpg?src=gp&w=300&h=375"
-        title="Ut sunt nulla pariatur sit est cillum. Voluptate proident veniam proident reprehenderit cupidatat pariatur culpa exercitation. Ad nostrud mollit Lorem irure. Est non pariatur sint fugiat aliquip est culpa eu id ex cupidatat do amet reprehenderit. Commodo culpa duis qui do proident. Dolore aliquip consequat adipisicing et qui qui laboris elit proident consequat reprehenderit. Nulla consequat excepteur commodo nisi proident qui mollit consectetur velit esse occaecat proident aliquip irure."
-      />
-      <div
-        className="preview"
-      >
-        <span>
-          KIDGREASE
-        </span>
-        <button>
-          Order
-        </button>
-      </div>
-    </div>
-    <div
-      className="previewContainer"
-    >
-      <img
-        alt="Movie"
-        className="movie"
-        src="https://imgc.allpostersimages.com/img/posters/braveheart_u-L-F4S6VR0.jpg?src=gp&w=300&h=375"
-        title="Laboris elit cillum ad consectetur tempor culpa sunt aliquip do aliquip Lorem veniam consectetur duis. Ea est cillum aliqua nisi aute commodo. Sit pariatur amet ad duis cillum consectetur sint sunt proident sunt commodo do mollit laborum. Minim voluptate cillum velit in occaecat consectetur do voluptate dolor Lorem velit occaecat ut. Culpa laborum dolor officia et. Id occaecat nulla deserunt laborum."
-      />
-      <div
-        className="preview"
-      >
-        <span>
-          NORSUP
-        </span>
-        <button>
-          Order
-        </button>
-      </div>
-    </div>
-    <div
-      className="previewContainer"
-    >
-      <img
-        alt="Movie"
-        className="movie"
-        src="https://imgc.allpostersimages.com/img/posters/a-christmas-carol_u-L-F3NEXQ0.jpg?src=gp&w=300&h=375"
-        title="Cupidatat consectetur ullamco ad et fugiat elit do cupidatat deserunt laboris laboris. Nulla dolore adipisicing pariatur laboris consectetur proident amet magna. Elit ad consequat ipsum ex aliquip duis incididunt Lorem consequat sunt sunt dolore minim laborum."
-      />
-      <div
-        className="preview"
-      >
-        <span>
-          STREZZO
-        </span>
-        <button>
-          Order
-        </button>
-      </div>
-    </div>
-    <div
-      className="previewContainer"
-    >
-      <img
-        alt="Movie"
-        className="movie"
-        src="https://imgc.allpostersimages.com/img/posters/alphaville-french-style_u-L-F4SA0K0.jpg?src=gp&w=300&h=375"
-        title="Magna et nulla et minim in laboris. Proident anim proident in ad laboris eiusmod proident enim. Amet voluptate mollit amet quis aute exercitation eiusmod duis deserunt ex est aliqua. Cillum mollit laborum dolor ad fugiat deserunt reprehenderit aute non labore reprehenderit culpa dolor ullamco."
-      />
-      <div
-        className="preview"
-      >
-        <span>
-          LUNCHPOD
-        </span>
-        <button>
-          Order
-        </button>
-      </div>
-    </div>
-    <div
-      className="previewContainer"
-    >
-      <img
-        alt="Movie"
-        className="movie"
-        src="https://imgc.allpostersimages.com/img/posters/the-book-thief_u-L-F6D1GO0.jpg?src=gp&w=300&h=375"
-        title="Exercitation laboris in aute eu enim. Incididunt laboris sint eiusmod minim anim dolore ullamco nostrud anim anim ullamco. Tempor deserunt excepteur pariatur reprehenderit irure dolor velit ea et voluptate sunt quis. Id non nostrud aute veniam et commodo est proident labore anim consequat. Irure enim excepteur esse laboris occaecat."
-      />
-      <div
-        className="preview"
-      >
-        <span>
-          COMTEXT
-        </span>
-        <button>
-          Order
-        </button>
-      </div>
-    </div>
-    <div
-      className="previewContainer"
-    >
-      <img
-        alt="Movie"
-        className="movie"
-        src="https://imgc.allpostersimages.com/img/posters/godfather-color_u-L-F4VAN20.jpg?src=gp&w=300&h=375"
-        title="Veniam do deserunt labore fugiat tempor. Id ea ut aliquip aute magna ipsum cupidatat est eu laborum. Fugiat cillum sunt occaecat deserunt reprehenderit tempor veniam in nulla sint id pariatur nisi. Fugiat Lorem culpa ut fugiat nostrud qui occaecat."
-      />
-      <div
-        className="preview"
-      >
-        <span>
-          SARASONIC
-        </span>
-        <button>
-          Order
-        </button>
-      </div>
-    </div>
-    <div
-      className="previewContainer"
-    >
-      <img
-        alt="Movie"
-        className="movie"
-        src="https://imgc.allpostersimages.com/img/posters/diabolique_u-L-F3NDLG0.jpg?src=gp&w=300&h=375"
-        title="Ex Lorem duis tempor ex aliqua fugiat anim esse occaecat duis. Aliquip do dolore est ea nulla aliquip nostrud sunt cupidatat qui velit reprehenderit. Nulla ad consequat non non commodo consectetur pariatur elit esse. Ex exercitation aute do non ipsum incididunt et exercitation dolor ipsum non voluptate."
-      />
-      <div
-        className="preview"
-      >
-        <span>
-          SLAMBDA
-        </span>
-        <button>
-          Order
-        </button>
-      </div>
-    </div>
-    <div
-      className="previewContainer"
-    >
-      <img
-        alt="Movie"
-        className="movie"
-        src="https://imgc.allpostersimages.com/img/posters/secret-window_u-L-F4JAUM0.jpg?src=gp&w=300&h=375"
-        title="Officia dolore aliquip consequat nisi ullamco aute ex ex dolor duis eiusmod consequat. Ea Lorem commodo deserunt dolore anim et. Fugiat adipisicing incididunt excepteur commodo officia pariatur minim. Nisi duis qui amet proident ad adipisicing do eiusmod dolore officia eiusmod ut veniam reprehenderit. Irure eiusmod labore non nulla consequat quis irure. Amet dolor incididunt fugiat quis sunt excepteur occaecat anim fugiat et. Enim irure in labore incididunt."
-      />
-      <div
-        className="preview"
-      >
-        <span>
-          SCENTRIC
         </span>
         <button>
           Order

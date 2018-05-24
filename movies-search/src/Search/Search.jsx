@@ -1,28 +1,54 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import styles from '../styles/App.css'
+import styles from './search.css'
+import PropTypes from 'prop-types';
+import { searchMovies } from '../actions.jsx'
+import { connect } from 'react-redux';
 
-class Search extends React.PureComponent {
-  selectedFilter = "Title";
-  getStyle = (name) => {
-    return name == this.selectedFilter ? { "backgroundColor":"cornflowerblue" } :  { "backgroundColor":"aliceblue" };
-  };
+class Search extends React.Component {
+  state = { input: "", isToggleOn: true, searchField: filters[0] };
+
+  handleChange = (e) => {
+    this.setState({
+      input: e.target.value
+    })
+  }
+
+  handleClick() {
+    this.setState(function (prevState) {
+      return { isToggleOn: !prevState.isToggleOn, searchField: !prevState.isToggleOn ? filters[0] : filters[1] };
+    });
+  }
 
   render() {
     return <div><div>Find your movie </div>
-      <input className={styles.search} placeholder="Type here..">{this.props.search}</input>
+      <input name="search" className={styles.search} placeholder="Type here.." 
+        onKeyDown={e => e.keyCode == 13 ? this.props.fetchData(this.state.input, this.state.searchField) : ""}
+        onChange={e => this.handleChange(e)}>
+      </input>
       <div className={styles.filter}>
-        <span>Search by
-          <span>
-            <button style = {this.getStyle(filters[0])}>{filters[0]}</button>
-            <button style = {this.getStyle(filters[1])}>{filters[1]}</button>
-          </span>
+        <span className={styles.searchOption}>Search by
+            <button onClick={() => this.handleClick()}>
+            {this.state.searchField}
+          </button>
         </span>
-        <button>Search</button>
+        <button onClick={e => {
+          e.preventDefault();
+          this.props.fetchData(this.state.input, this.state.searchField);
+        }}>Search</button>
       </div>
     </div>;
   }
-}
-export default Search;
+};
 
-const filters = ["Title", "Director"]
+const filters = ["Title", "Genre"];
+
+const mapStateToProps = state => ({ movies: state.movies })
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchData: (searchTearm, fieldName) => dispatch(searchMovies(searchTearm, fieldName))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
