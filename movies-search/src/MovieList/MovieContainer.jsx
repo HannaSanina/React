@@ -2,16 +2,24 @@ import React from "react";
 import MovieList from "./MovieList";
 import StatusBar from "./StatusBar";
 import PropTypes from 'prop-types';
-import { fetchAllMovies, SORT_MOVIES, GET_ALL } from '../actions.jsx'
+import { fetchAllMovies, searchMovies, SORT_MOVIES, GET_ALL } from '../actions.jsx'
 import { connect } from 'react-redux';
 import styles from './movieList.css'
 import StatusBarContainer from "./StatusBarContainer";
 
 class MovieListContainer extends React.Component {
     state = { isToggleOn: true, sortOption: filters[0] };
+    params = new URLSearchParams(this.props.location.search);
 
     componentDidMount() {
-          this.props.fetchData()
+        if (this.props.match.params.query) {
+            this.props.searchMovie(this.props.match.params.query);
+        }
+        else {
+            this.props.fetchData();
+        }
+
+
     }
 
     render() {
@@ -29,7 +37,8 @@ const filters = ["release_date", "vote_count"];
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchData: () => dispatch(fetchAllMovies())
+        fetchData: () => dispatch(fetchAllMovies()),
+        searchMovie: (query) => dispatch(searchMovies(query))
     };
 };
 

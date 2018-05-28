@@ -15,3 +15,13 @@ img.movie {
     width: 75%;
     padding-left: 40px;
 }
+
+.title{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.date{
+    border: 2px grey solid;
+    padding: 2px;
+}

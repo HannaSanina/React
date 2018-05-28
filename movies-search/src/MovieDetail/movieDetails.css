@@ -1,0 +1,30 @@
+   .movie {
+       width: 60%;
+       padding: 25px;
+       padding-bottom: 160px;
+   }
+
+   .container {
+       display: flex;
+       flex-direction: row;
+   }
+
+   .title {
+       text-transform: uppercase;
+       color: cornflowerblue;
+       font-size: 25px;
+       font-weight: 600;
+       padding-top: 25px;
+   }
+
+   .overview, .release_date, .tagline {
+       padding-top:10px;
+   }
+
+   .overview {
+       font-style: italic;
+   }
+
+   .movieDetails {
+    width: 500px;
+   }

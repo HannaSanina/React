@@ -32,3 +32,8 @@ footer {
 button {
     cursor: pointer;
 }
+
+.empty {
+    padding-left: 690px;
+    height: 650px;
+}
