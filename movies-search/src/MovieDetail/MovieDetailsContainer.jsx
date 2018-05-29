@@ -17,11 +17,9 @@ class MovieDetailsContainer extends React.Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        fetchDataDetails: (id) => dispatch(getMovieById(id))
-    };
-};
+const mapDispatchToProps = {
+    fetchDataDetails: getMovieById
+  }
 
 const mapStateToProps = state => ({ movieDetails: state.movieDetails, error: state.error })
 

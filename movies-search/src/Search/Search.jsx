@@ -56,10 +56,8 @@ const filters = ["Title", "Genre"];
 
 const mapStateToProps = state => ({ movies: state.movies })
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchData: (query) => dispatch(searchMovies(query))
-  };
+const mapDispatchToProps =  {
+    fetchData: searchMovies
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);

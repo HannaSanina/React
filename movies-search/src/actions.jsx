@@ -4,7 +4,7 @@ export const SORT_MOVIES = 'SORT_MOVIES';
 export const FETCH_DETAILS_SUCCESS = 'FETCH_DETAILS_SUCCESS';
 
 export const searchMovies = (query) => (dispatch) => {
-    const searchQuery = `${url}/?${query}`;
+    const searchQuery = query ? `${url}/?${query}` : url;
     return fetch(searchQuery)
         .then(res => res.json())
         .then(

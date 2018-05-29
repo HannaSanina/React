@@ -12,14 +12,7 @@ class MovieListContainer extends React.Component {
     params = new URLSearchParams(this.props.location.search);
 
     componentDidMount() {
-        if (this.props.match.params.query) {
-            this.props.searchMovie(this.props.match.params.query);
-        }
-        else {
-            this.props.fetchData();
-        }
-
-
+        this.props.searchMovies(this.props.match.params.query);
     }
 
     render() {
@@ -35,12 +28,9 @@ class MovieListContainer extends React.Component {
 
 const filters = ["release_date", "vote_count"];
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        fetchData: () => dispatch(fetchAllMovies()),
-        searchMovie: (query) => dispatch(searchMovies(query))
-    };
-};
+const mapDispatchToProps = {
+    searchMovies: searchMovies
+}
 
 const mapStateToProps = state => ({ movies: state.movies, error: state.error })
 
