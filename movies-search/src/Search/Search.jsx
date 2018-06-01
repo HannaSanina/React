@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styles from './search.css'
 import PropTypes from 'prop-types';
-import { searchMovies } from '../actions.jsx'
+/* import { searchMovies } from '../actions.jsx' */
+import { searchMovies } from '../modules/movies'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 
@@ -56,8 +57,8 @@ const filters = ["Title", "Genre"];
 
 const mapStateToProps = state => ({ movies: state.movies })
 
-const mapDispatchToProps =  {
-    fetchData: searchMovies
+const mapDispatchToProps = {
+  fetchData: searchMovies
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);
