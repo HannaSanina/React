@@ -1,10 +1,11 @@
 import React from "react";
-import { getMovieById } from '../actions.jsx'
+/* import { getMovieById } from '../actions.jsx' */
+import { getMovieById } from '../modules/movies'
 import { connect } from 'react-redux';
 import MovieDetails from './MovieDetails';
 
 class MovieDetailsContainer extends React.Component {
-    componentDidMount() {
+    componentWillMount() {
         if(this.props.match.params.number) {
             this.props.fetchDataDetails(parseInt(this.props.match.params.number, 10))
         }

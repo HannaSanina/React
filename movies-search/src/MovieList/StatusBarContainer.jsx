@@ -2,7 +2,7 @@ import React from "react";
 import MovieList from "./MovieList";
 import StatusBar from "./StatusBar";
 import PropTypes from 'prop-types';
-import { fetchAllMovies, SORT_MOVIES, GET_ALL } from '../actions.jsx'
+import { SORT_MOVIES } from '../modules/movies'
 import { connect } from 'react-redux';
 import styles from './movieList.css'
 
